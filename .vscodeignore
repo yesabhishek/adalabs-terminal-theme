@@ -1,0 +1,9 @@
+.git/**
+.gitignore
+.github/**
+.vscode/**
+node_modules/**
+*.vsix
+npm-debug.log
+yarn-error.log
+pnpm-debug.log

@@ -1,0 +1,76 @@
+{
+  "name": "adalabs-terminal",
+  "displayName": "AdaLabs Terminal",
+  "publisher": "abhishek-choudhury",
+  "description": "Pure-black terminal-inspired themes for focused code.",
+  "version": "1.0.0",
+  "icon": "assets/icon.png",
+  "license": "MIT",
+  "author": {
+    "name": "Abhishek Choudhury",
+    "email": "choudhuryabhishek76@gmail.com",
+    "url": "https://abhishekchoudhury.com/"
+  },
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "adalabs",
+    "terminal",
+    "black",
+    "dark",
+    "oled",
+    "theme",
+    "syntax",
+    "vscode"
+  ],
+  "galleryBanner": {
+    "color": "#000000",
+    "theme": "dark"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yesabhishek/adalabs-terminal-theme"
+  },
+  "bugs": {
+    "url": "https://github.com/yesabhishek/adalabs-terminal-theme/issues"
+  },
+  "homepage": "https://abhishekchoudhury.com/",
+  "contributes": {
+    "themes": [
+      {
+        "label": "AdaLabs Terminal",
+        "uiTheme": "vs-dark",
+        "path": "./themes/just-black.json"
+      },
+      {
+        "label": "AdaLabs Terminal Original",
+        "uiTheme": "vs-dark",
+        "path": "./themes/original.json"
+      },
+      {
+        "label": "AdaLabs Terminal Italics",
+        "uiTheme": "vs-dark",
+        "path": "./themes/original-italics.json"
+      },
+      {
+        "label": "AdaLabs Terminal Amla",
+        "uiTheme": "vs-dark",
+        "path": "./themes/codex.json"
+      },
+      {
+        "label": "AdaLabs Terminal Yuzu",
+        "uiTheme": "vs-dark",
+        "path": "./themes/github-dark.json"
+      },
+      {
+        "label": "AdaLabs Terminal Pitaya",
+        "uiTheme": "vs-dark",
+        "path": "./themes/cursor.json"
+      }
+    ]
+  }
+}
