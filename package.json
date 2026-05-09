@@ -2,8 +2,8 @@
   "name": "adalabs-terminal",
   "displayName": "AdaLabs Terminal",
   "publisher": "AbhishekChoudhury",
-  "description": "Pure-black terminal-inspired themes for focused code.",
-  "version": "1.0.0",
+  "description": "Ten readable dark and light VS Code themes with consistent syntax colors.",
+  "version": "1.1.0",
   "icon": "assets/icon.png",
   "license": "MIT",
   "author": {
@@ -22,7 +22,10 @@
     "terminal",
     "black",
     "dark",
+    "light",
+    "contrast",
     "oled",
+    "lcd",
     "theme",
     "syntax",
     "vscode"
@@ -42,34 +45,54 @@
   "contributes": {
     "themes": [
       {
-        "label": "AdaLabs Terminal",
+        "label": "AdaLabs Dark 1",
         "uiTheme": "vs-dark",
-        "path": "./themes/just-black.json"
+        "path": "./themes/dark-1.json"
       },
       {
-        "label": "AdaLabs Terminal Original",
+        "label": "AdaLabs Dark 2",
         "uiTheme": "vs-dark",
-        "path": "./themes/original.json"
+        "path": "./themes/dark-2.json"
       },
       {
-        "label": "AdaLabs Terminal Italics",
+        "label": "AdaLabs Dark 3",
         "uiTheme": "vs-dark",
-        "path": "./themes/original-italics.json"
+        "path": "./themes/dark-3.json"
       },
       {
-        "label": "AdaLabs Terminal Amla",
+        "label": "AdaLabs Dark 4",
         "uiTheme": "vs-dark",
-        "path": "./themes/codex.json"
+        "path": "./themes/dark-4.json"
       },
       {
-        "label": "AdaLabs Terminal Yuzu",
+        "label": "AdaLabs Dark 5",
         "uiTheme": "vs-dark",
-        "path": "./themes/github-dark.json"
+        "path": "./themes/dark-5.json"
       },
       {
-        "label": "AdaLabs Terminal Pitaya",
-        "uiTheme": "vs-dark",
-        "path": "./themes/cursor.json"
+        "label": "AdaLabs Light 1",
+        "uiTheme": "vs",
+        "path": "./themes/light-1.json"
+      },
+      {
+        "label": "AdaLabs Light 2",
+        "uiTheme": "vs",
+        "path": "./themes/light-2.json"
+      },
+      {
+        "label": "AdaLabs Light 3",
+        "uiTheme": "vs",
+        "path": "./themes/light-3.json"
+      },
+      {
+        "label": "AdaLabs Light 4",
+        "uiTheme": "vs",
+        "path": "./themes/light-4.json"
+      },
+      {
+        "label": "AdaLabs Light 5",
+        "uiTheme": "vs",
+        "path": "./themes/light-5.json"
       }
     ]
   }
