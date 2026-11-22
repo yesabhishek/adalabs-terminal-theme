@@ -46,7 +46,8 @@
   "scripts": {
     "build": "node scripts/build.mjs",
     "check": "node scripts/build.mjs --check",
-    "package": "node scripts/build.mjs && vsce package --no-dependencies"
+    "package": "node scripts/build.mjs && vsce package --no-dependencies",
+    "shots": "node scripts/preview.mjs && node scripts/screenshots.mjs"
   },
   "contributes": {
     "themes": [
