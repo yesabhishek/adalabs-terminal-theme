@@ -1,95 +1,64 @@
 # AdaLabs Terminal
 
-Ten readable VS Code themes with simple dark and light shade ranges.
+Twenty hand-tuned VS Code themes, **10 dark and 10 light**. They run from OLED black through slate and espresso, and from pure white through paper and sepia.
 
-AdaLabs Terminal is built for switching between screens, rooms, and display types without relearning syntax colors. The family now uses five dark shades and five light shades, all with the same token mapping for keywords, functions, types, strings, numbers, comments, filenames, line numbers, snippets, diagnostics, git states, and Markdown/code block highlighting.
+Each theme comes from a single palette. The editor, sidebar, tabs, status bar, terminal ANSI colors, bracket pairs, outline icons, diff and git states, and syntax all match each other. Switching themes changes the mood, not what each color means.
 
-## Themes
+![All twenty AdaLabs Terminal themes](assets/preview.png)
 
-Shade numbers increase with background brightness and softness.
+## The range
 
-### Dark
+| Dark | Feel | Light | Feel |
+| --- | --- | --- | --- |
+| **Obsidian** | OLED true black, crisp cool syntax | **Snow** | Pure white, monochrome chrome |
+| **Carbon** | Neutral graphite, ember-orange accent | **Paper** | Warm notebook paper, burnt-orange ink |
+| **Slate** | Blue-gray slate, calm for long sessions | **Linen** | Soft cream with deep teal |
+| **Ink** | Midnight navy, violet ink | **Sepia** | Aged parchment, warmest and easiest on the eyes |
+| **Graphite** | Soft mid-gray, low glare | **Mist** | Cool gray-white, clear blue |
+| **Espresso** | Roasted brown-black, caramel | **Cloud** | Light slate blue-gray |
+| **Moss** | Forest green-black, organic | **Sage** | Pale sage, restful |
+| **Plum** | Aubergine with orchid and peach | **Blush** | Rose off-white, raspberry |
+| **Abyss** | Deep-sea teal, bioluminescent cyan | **Lavender** | Lilac wash, electric violet |
+| **Dusk** | Low-contrast twilight violet-gray | **Stone** | Dim concrete gray for all-day use |
 
-- **AdaLabs Dark 1**: True black `#000000` for OLED displays and high-focus editing.
-- **AdaLabs Dark 2**: Near-black `#050505` with slightly softer panel separation.
-- **AdaLabs Dark 3**: Balanced graphite black `#0B0B0B` for long reading sessions.
-- **AdaLabs Dark 4**: Softer charcoal black `#111111` with lower contrast across the workbench.
-- **AdaLabs Dark 5**: Softest dark `#181818` for LCD/TN panels and brighter rooms.
+## One palette, everywhere
 
-### Light
+- **Workbench:** activity bar, sidebar, tabs, title bar, command center, status bar, menus, quick pick, notifications, settings, and chat all use the same surfaces and accent.
+- **Terminal:** the 16 ANSI colors come from the theme's own syntax colors, so `git status` looks like your diff gutter.
+- **Syntax:** fixed roles in every theme. Keywords, functions, types, strings, numbers, properties, comments and regex each keep their role, and each theme tunes the hues. Includes TextMate and semantic tokens.
+- **Everything else:** bracket-pair colors, outline and suggest icons, diff and merge, debug, testing, notebooks, minimap and scrollbars.
 
-- **AdaLabs Light 1**: Clean white `#FFFFFF` for bright LCD/TN panels.
-- **AdaLabs Light 2**: Cool off-white `#F8FAFC` with gentle surface contrast.
-- **AdaLabs Light 3**: Balanced light `#F3F4F6` for everyday document and code reading.
-- **AdaLabs Light 4**: Softer light `#ECEFF3` for reduced glare.
-- **AdaLabs Light 5**: Softest light `#E5E9EF` for daylight use and long review sessions.
-
-## Recommendations
-
-- Choose **AdaLabs Dark 1** for OLED true black.
-- Choose **AdaLabs Dark 3** or **AdaLabs Dark 4** for lower-contrast long reading.
-- Choose **AdaLabs Light 1** or **AdaLabs Light 2** for bright LCD/TN panels.
-- Choose **AdaLabs Light 4** or **AdaLabs Light 5** for softer daylight use.
-
-## Syntax Palette
-
-All ten themes use a consistent syntax model:
-
-- Keywords: blue
-- Functions and methods: cyan
-- Types and classes: violet
-- Strings: green
-- Numbers and constants: amber
-- Parameters and properties: slate-blue
-- Comments: muted neutral with readable contrast
-- Diagnostics: red, amber, and blue
+Every syntax color meets WCAG AA (4.5:1) against its background. Comments meet at least 3.5:1, so they recede without becoming unreadable.
 
 ## Install
 
-1. Open the Extensions view in VS Code.
-2. Search for **AdaLabs Terminal**.
-3. Install the extension.
-4. Run **Preferences: Color Theme** and choose an AdaLabs Dark or AdaLabs Light shade.
+1. Open the Extensions view in VS Code and search for **AdaLabs Terminal**.
+2. Install it, then run **Preferences: Color Theme** and pick any **AdaLabs** theme.
 
-For local testing from this repository:
+Tip: turn on `"window.autoDetectColorScheme": true` and set `workbench.preferredDarkColorTheme` and `workbench.preferredLightColorTheme`. For example, use *AdaLabs Slate* and *AdaLabs Paper* to follow your OS.
 
-```sh
-npx @vscode/vsce package --no-dependencies
-code --install-extension adalabs-terminal-1.1.0.vsix
-```
+## Upgrading from 1.x
 
-## Semantic Highlighting
+The numbered shades (Dark 1–5, Light 1–5) were replaced by named themes. The closest matches:
 
-AdaLabs Terminal enables semantic highlighting and includes semantic token colors for modern language servers. This keeps TypeScript, JavaScript, Rust, Python, and other language-server-backed syntax aligned with the same palette across every shade.
-
-If you prefer only TextMate token colors, you can disable semantic highlighting in your VS Code settings:
-
-```json
-{
-  "editor.semanticHighlighting.enabled": false
-}
-```
-
-## Design Notes
-
-The dark range moves from OLED true black to neutral graphite surfaces, with black and gray UI accents instead of blue-tinted chrome. The light range moves from clean white to soft daylight grays. Each theme keeps the same workbench structure and syntax mapping so switching shades changes brightness and contrast, not the meaning of the colors.
-
-## Links
-
-- Website: [abhishekchoudhury.com](https://abhishekchoudhury.com/)
-- Source: [github.com/yesabhishek/adalabs-terminal-theme](https://github.com/yesabhishek/adalabs-terminal-theme)
-- Issues: [github.com/yesabhishek/adalabs-terminal-theme/issues](https://github.com/yesabhishek/adalabs-terminal-theme/issues)
+- Dark 1 → **Obsidian**, Dark 2 → **Carbon**, Dark 5 → **Graphite**
+- Light 1 → **Snow**, Light 5 → **Stone**
 
 ## Development
 
-Validate the theme JSON:
+Themes are generated from [`scripts/palettes.mjs`](scripts/palettes.mjs). Edit a palette, then run:
 
 ```sh
-for file in package.json themes/*.json; do node -e "JSON.parse(require('fs').readFileSync(process.argv[1], 'utf8'))" "$file"; done
+npm run build     # contrast audit + regenerate themes/*.json and package.json theme list
+npm run check     # contrast audit only
+npm run package   # build + vsce package
 ```
 
-Package the extension:
+## Maintainer
 
-```sh
-npx @vscode/vsce package --no-dependencies
-```
+**Abhishek Choudhury**: [www.abhishekchoudhury.com](https://www.abhishekchoudhury.com)
+
+- Source: [github.com/yesabhishek/adalabs-terminal-theme](https://github.com/yesabhishek/adalabs-terminal-theme)
+- Issues: [github.com/yesabhishek/adalabs-terminal-theme/issues](https://github.com/yesabhishek/adalabs-terminal-theme/issues)
+
+MIT licensed.

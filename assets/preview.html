@@ -1,0 +1,228 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+body{margin:0;padding:28px;background:linear-gradient(90deg,#0b0b0c 50%,#efeae0 50%);font-family:-apple-system,system-ui,sans-serif;width:1544px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.col{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.card{border:1px solid;border-radius:12px;overflow:hidden;box-shadow:0 6px 18px #0003}
+.bar{display:flex;align-items:center;justify-content:space-between;padding:9px 12px;border-bottom:1px solid;font-size:13px}
+.sw i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-left:4px}
+pre{margin:0;padding:10px 12px 6px;font:11.5px/1.55 "SF Mono",Menlo,monospace;white-space:pre}
+.term{margin:0 12px 10px;padding:5px 8px;border-top:1px dashed;font:11px "SF Mono",Menlo,monospace}
+</style></head><body><div class="cols"><div class="col"><div class="card" style="background:#000000;border-color:#1C1C1C">
+  <div class="bar" style="background:#000000;border-color:#1C1C1C">
+    <b style="color:#FFFFFF">Obsidian</b><span class="sw"><i style="background:#E6E6E6"></i><i style="background:#7AA2FF"></i><i style="background:#5FD7E8"></i><i style="background:#C792FF"></i><i style="background:#8EE59B"></i><i style="background:#FFC66D"></i><i style="background:#FF6B6B"></i></span>
+  </div>
+  <pre style="color:#E6E6E6"><span style="color:#707070">// oled true black with crisp, cool syntax</span>
+<span style="color:#7AA2FF">export async function</span> <span style="color:#5FD7E8">render</span><span style="color:#A0A0A0">(</span><span style="color:#A9C1F5"><i>theme</i></span><span style="color:#A0A0A0">:</span> <span style="color:#C792FF">Theme</span><span style="color:#A0A0A0">) {</span>
+  <span style="color:#7AA2FF">const</span> <span style="color:#E6E6E6">size</span> <span style="color:#A0A0A0">=</span> <span style="color:#FFC66D">20</span><span style="color:#A0A0A0">;</span>
+  <span style="color:#7AA2FF">return</span> <span style="color:#E6E6E6">ui</span><span style="color:#A0A0A0">.</span><span style="color:#5FD7E8">paint</span><span style="color:#A0A0A0">(</span><span style="color:#8EE59B">"obsidian"</span><span style="color:#A0A0A0">, /</span><span style="color:#F78C6C">\w+</span><span style="color:#A0A0A0">/);</span>
+<span style="color:#A0A0A0">}</span></pre>
+  <div class="term" style="background:#000000;border-color:#1C1C1C;color:#E6E6E6"><span style="color:#8EE59B">➜</span> <span style="color:#5FD7E8">~/app</span> <span style="color:#7AA2FF">git:(</span><span style="color:#FF6B6B">main</span><span style="color:#7AA2FF">)</span> <span style="color:#FFC66D">npm</span> test</div>
+</div>
+<div class="card" style="background:#121212;border-color:#242424">
+  <div class="bar" style="background:#0C0C0C;border-color:#242424">
+    <b style="color:#F5F5F5">Carbon</b><span class="sw"><i style="background:#FF8A3D"></i><i style="background:#FF8A3D"></i><i style="background:#FFD173"></i><i style="background:#7FD4C1"></i><i style="background:#B5D99C"></i><i style="background:#E59BD6"></i><i style="background:#FF6E6E"></i></span>
+  </div>
+  <pre style="color:#DCDCDC"><span style="color:#737373">// neutral graphite black with an ember-orange accent</span>
+<span style="color:#FF8A3D">export async function</span> <span style="color:#FFD173">render</span><span style="color:#A8A8A8">(</span><span style="color:#B8C4D0"><i>theme</i></span><span style="color:#A8A8A8">:</span> <span style="color:#7FD4C1">Theme</span><span style="color:#A8A8A8">) {</span>
+  <span style="color:#FF8A3D">const</span> <span style="color:#DCDCDC">size</span> <span style="color:#A8A8A8">=</span> <span style="color:#E59BD6">20</span><span style="color:#A8A8A8">;</span>
+  <span style="color:#FF8A3D">return</span> <span style="color:#DCDCDC">ui</span><span style="color:#A8A8A8">.</span><span style="color:#FFD173">paint</span><span style="color:#A8A8A8">(</span><span style="color:#B5D99C">"carbon"</span><span style="color:#A8A8A8">, /</span><span style="color:#7FD4C1">\w+</span><span style="color:#A8A8A8">/);</span>
+<span style="color:#A8A8A8">}</span></pre>
+  <div class="term" style="background:#121212;border-color:#242424;color:#DCDCDC"><span style="color:#B5D99C">➜</span> <span style="color:#7FD4C1">~/app</span> <span style="color:#7FB2E5">git:(</span><span style="color:#FF6E6E">main</span><span style="color:#7FB2E5">)</span> <span style="color:#FFD173">npm</span> test</div>
+</div>
+<div class="card" style="background:#1B222C;border-color:#2A3340">
+  <div class="bar" style="background:#161C24;border-color:#2A3340">
+    <b style="color:#EEF2F6">Slate</b><span class="sw"><i style="background:#7FB4FF"></i><i style="background:#8FB8FF"></i><i style="background:#7DD3E0"></i><i style="background:#E3B5FF"></i><i style="background:#A8D8A0"></i><i style="background:#F2C38B"></i><i style="background:#F28B8B"></i></span>
+  </div>
+  <pre style="color:#CDD6E0"><span style="color:#75859A">// blue-gray slate, calm and balanced for long sessions</span>
+<span style="color:#8FB8FF">export async function</span> <span style="color:#7DD3E0">render</span><span style="color:#9AA6B5">(</span><span style="color:#B7C6DB"><i>theme</i></span><span style="color:#9AA6B5">:</span> <span style="color:#E3B5FF">Theme</span><span style="color:#9AA6B5">) {</span>
+  <span style="color:#8FB8FF">const</span> <span style="color:#CDD6E0">size</span> <span style="color:#9AA6B5">=</span> <span style="color:#F2C38B">20</span><span style="color:#9AA6B5">;</span>
+  <span style="color:#8FB8FF">return</span> <span style="color:#CDD6E0">ui</span><span style="color:#9AA6B5">.</span><span style="color:#7DD3E0">paint</span><span style="color:#9AA6B5">(</span><span style="color:#A8D8A0">"slate"</span><span style="color:#9AA6B5">, /</span><span style="color:#F29E9E">\w+</span><span style="color:#9AA6B5">/);</span>
+<span style="color:#9AA6B5">}</span></pre>
+  <div class="term" style="background:#1B222C;border-color:#2A3340;color:#CDD6E0"><span style="color:#A8D8A0">➜</span> <span style="color:#7DD3E0">~/app</span> <span style="color:#8FB8FF">git:(</span><span style="color:#F28B8B">main</span><span style="color:#8FB8FF">)</span> <span style="color:#F2C38B">npm</span> test</div>
+</div>
+<div class="card" style="background:#0B1020;border-color:#1A2238">
+  <div class="bar" style="background:#080C18;border-color:#1A2238">
+    <b style="color:#F2F5FF">Ink</b><span class="sw"><i style="background:#9D8CFF"></i><i style="background:#A594FF"></i><i style="background:#6FC3FF"></i><i style="background:#FF9EC7"></i><i style="background:#7EE0B5"></i><i style="background:#FFCB7A"></i><i style="background:#FF7A8A"></i></span>
+  </div>
+  <pre style="color:#D5DCF0"><span style="color:#66729A">// deep midnight navy with violet ink highlights</span>
+<span style="color:#A594FF">export async function</span> <span style="color:#6FC3FF">render</span><span style="color:#8F99BA">(</span><span style="color:#AEB8DC"><i>theme</i></span><span style="color:#8F99BA">:</span> <span style="color:#FF9EC7">Theme</span><span style="color:#8F99BA">) {</span>
+  <span style="color:#A594FF">const</span> <span style="color:#D5DCF0">size</span> <span style="color:#8F99BA">=</span> <span style="color:#FFCB7A">20</span><span style="color:#8F99BA">;</span>
+  <span style="color:#A594FF">return</span> <span style="color:#D5DCF0">ui</span><span style="color:#8F99BA">.</span><span style="color:#6FC3FF">paint</span><span style="color:#8F99BA">(</span><span style="color:#7EE0B5">"ink"</span><span style="color:#8F99BA">, /</span><span style="color:#FF9E7A">\w+</span><span style="color:#8F99BA">/);</span>
+<span style="color:#8F99BA">}</span></pre>
+  <div class="term" style="background:#0B1020;border-color:#1A2238;color:#D5DCF0"><span style="color:#7EE0B5">➜</span> <span style="color:#5FE0E8">~/app</span> <span style="color:#6FC3FF">git:(</span><span style="color:#FF7A8A">main</span><span style="color:#6FC3FF">)</span> <span style="color:#FFCB7A">npm</span> test</div>
+</div>
+<div class="card" style="background:#242424;border-color:#323232">
+  <div class="bar" style="background:#1D1D1D;border-color:#323232">
+    <b style="color:#F2F2F2">Graphite</b><span class="sw"><i style="background:#5CCFB0"></i><i style="background:#6FD0B8"></i><i style="background:#E8D27A"></i><i style="background:#8AB4F8"></i><i style="background:#C3E88D"></i><i style="background:#F4A07A"></i><i style="background:#F27C7C"></i></span>
+  </div>
+  <pre style="color:#D8D8D8"><span style="color:#808080">// soft mid-gray for bright rooms and lower glare</span>
+<span style="color:#6FD0B8">export async function</span> <span style="color:#E8D27A">render</span><span style="color:#ABABAB">(</span><span style="color:#C9B8E8"><i>theme</i></span><span style="color:#ABABAB">:</span> <span style="color:#8AB4F8">Theme</span><span style="color:#ABABAB">) {</span>
+  <span style="color:#6FD0B8">const</span> <span style="color:#D8D8D8">size</span> <span style="color:#ABABAB">=</span> <span style="color:#F4A07A">20</span><span style="color:#ABABAB">;</span>
+  <span style="color:#6FD0B8">return</span> <span style="color:#D8D8D8">ui</span><span style="color:#ABABAB">.</span><span style="color:#E8D27A">paint</span><span style="color:#ABABAB">(</span><span style="color:#C3E88D">"graphite"</span><span style="color:#ABABAB">, /</span><span style="color:#F28FB0">\w+</span><span style="color:#ABABAB">/);</span>
+<span style="color:#ABABAB">}</span></pre>
+  <div class="term" style="background:#242424;border-color:#323232;color:#D8D8D8"><span style="color:#C3E88D">➜</span> <span style="color:#6FD0B8">~/app</span> <span style="color:#8AB4F8">git:(</span><span style="color:#F27C7C">main</span><span style="color:#8AB4F8">)</span> <span style="color:#E8D27A">npm</span> test</div>
+</div>
+<div class="card" style="background:#1C1714;border-color:#2F2721">
+  <div class="bar" style="background:#16120F;border-color:#2F2721">
+    <b style="color:#FAF0E6">Espresso</b><span class="sw"><i style="background:#E8A86B"></i><i style="background:#E8A86B"></i><i style="background:#E6CC85"></i><i style="background:#D4A5C8"></i><i style="background:#A9C98A"></i><i style="background:#F08F6E"></i><i style="background:#F07F6E"></i></span>
+  </div>
+  <pre style="color:#E6D9CC"><span style="color:#8C7A66">// warm roasted brown-black with caramel accents</span>
+<span style="color:#E8A86B">export async function</span> <span style="color:#E6CC85">render</span><span style="color:#B3A28F">(</span><span style="color:#C9B7A2"><i>theme</i></span><span style="color:#B3A28F">:</span> <span style="color:#D4A5C8">Theme</span><span style="color:#B3A28F">) {</span>
+  <span style="color:#E8A86B">const</span> <span style="color:#E6D9CC">size</span> <span style="color:#B3A28F">=</span> <span style="color:#F08F6E">20</span><span style="color:#B3A28F">;</span>
+  <span style="color:#E8A86B">return</span> <span style="color:#E6D9CC">ui</span><span style="color:#B3A28F">.</span><span style="color:#E6CC85">paint</span><span style="color:#B3A28F">(</span><span style="color:#A9C98A">"espresso"</span><span style="color:#B3A28F">, /</span><span style="color:#8FC7B8">\w+</span><span style="color:#B3A28F">/);</span>
+<span style="color:#B3A28F">}</span></pre>
+  <div class="term" style="background:#1C1714;border-color:#2F2721;color:#E6D9CC"><span style="color:#A9C98A">➜</span> <span style="color:#8FC7B8">~/app</span> <span style="color:#8FB3D9">git:(</span><span style="color:#F07F6E">main</span><span style="color:#8FB3D9">)</span> <span style="color:#E6CC85">npm</span> test</div>
+</div>
+<div class="card" style="background:#121A16;border-color:#213029">
+  <div class="bar" style="background:#0E1512;border-color:#213029">
+    <b style="color:#EEF6F0">Moss</b><span class="sw"><i style="background:#7FD69B"></i><i style="background:#7FD69B"></i><i style="background:#8FD0E0"></i><i style="background:#C8A6F0"></i><i style="background:#E3C98A"></i><i style="background:#F2A285"></i><i style="background:#F28A80"></i></span>
+  </div>
+  <pre style="color:#D3E0D6"><span style="color:#718A7A">// forest-floor green-black, organic and quiet</span>
+<span style="color:#7FD69B">export async function</span> <span style="color:#8FD0E0">render</span><span style="color:#9FB2A5">(</span><span style="color:#B6CABB"><i>theme</i></span><span style="color:#9FB2A5">:</span> <span style="color:#C8A6F0">Theme</span><span style="color:#9FB2A5">) {</span>
+  <span style="color:#7FD69B">const</span> <span style="color:#D3E0D6">size</span> <span style="color:#9FB2A5">=</span> <span style="color:#F2A285">20</span><span style="color:#9FB2A5">;</span>
+  <span style="color:#7FD69B">return</span> <span style="color:#D3E0D6">ui</span><span style="color:#9FB2A5">.</span><span style="color:#8FD0E0">paint</span><span style="color:#9FB2A5">(</span><span style="color:#E3C98A">"moss"</span><span style="color:#9FB2A5">, /</span><span style="color:#E3A5D6">\w+</span><span style="color:#9FB2A5">/);</span>
+<span style="color:#9FB2A5">}</span></pre>
+  <div class="term" style="background:#121A16;border-color:#213029;color:#D3E0D6"><span style="color:#7FD69B">➜</span> <span style="color:#8FD0E0">~/app</span> <span style="color:#8FB8E8">git:(</span><span style="color:#F28A80">main</span><span style="color:#8FB8E8">)</span> <span style="color:#E3C98A">npm</span> test</div>
+</div>
+<div class="card" style="background:#1A1420;border-color:#2D2337">
+  <div class="bar" style="background:#15101A;border-color:#2D2337">
+    <b style="color:#F7F0FC">Plum</b><span class="sw"><i style="background:#D58CFF"></i><i style="background:#D58CFF"></i><i style="background:#7FD8E8"></i><i style="background:#FFB37A"></i><i style="background:#A6E3A1"></i><i style="background:#FF8FA8"></i><i style="background:#FF8FA8"></i></span>
+  </div>
+  <pre style="color:#E2D8EA"><span style="color:#857594">// aubergine dark with orchid and peach highlights</span>
+<span style="color:#D58CFF">export async function</span> <span style="color:#7FD8E8">render</span><span style="color:#AE9FBD">(</span><span style="color:#C7B8D8"><i>theme</i></span><span style="color:#AE9FBD">:</span> <span style="color:#FFB37A">Theme</span><span style="color:#AE9FBD">) {</span>
+  <span style="color:#D58CFF">const</span> <span style="color:#E2D8EA">size</span> <span style="color:#AE9FBD">=</span> <span style="color:#FF8FA8">20</span><span style="color:#AE9FBD">;</span>
+  <span style="color:#D58CFF">return</span> <span style="color:#E2D8EA">ui</span><span style="color:#AE9FBD">.</span><span style="color:#7FD8E8">paint</span><span style="color:#AE9FBD">(</span><span style="color:#A6E3A1">"plum"</span><span style="color:#AE9FBD">, /</span><span style="color:#F5D67A">\w+</span><span style="color:#AE9FBD">/);</span>
+<span style="color:#AE9FBD">}</span></pre>
+  <div class="term" style="background:#1A1420;border-color:#2D2337;color:#E2D8EA"><span style="color:#A6E3A1">➜</span> <span style="color:#7FD8E8">~/app</span> <span style="color:#8FB4FF">git:(</span><span style="color:#FF8FA8">main</span><span style="color:#8FB4FF">)</span> <span style="color:#F5D67A">npm</span> test</div>
+</div>
+<div class="card" style="background:#0A1517;border-color:#17292C">
+  <div class="bar" style="background:#071012;border-color:#17292C">
+    <b style="color:#EDF9F8">Abyss</b><span class="sw"><i style="background:#3FD2C7"></i><i style="background:#3FD2C7"></i><i style="background:#7FB8FF"></i><i style="background:#F2B279"></i><i style="background:#B4E08A"></i><i style="background:#FF9580"></i><i style="background:#FF8070"></i></span>
+  </div>
+  <pre style="color:#CFE3E2"><span style="color:#638586">// deep-sea teal black with bioluminescent cyan</span>
+<span style="color:#3FD2C7">export async function</span> <span style="color:#7FB8FF">render</span><span style="color:#94B0AF">(</span><span style="color:#A8C8C6"><i>theme</i></span><span style="color:#94B0AF">:</span> <span style="color:#F2B279">Theme</span><span style="color:#94B0AF">) {</span>
+  <span style="color:#3FD2C7">const</span> <span style="color:#CFE3E2">size</span> <span style="color:#94B0AF">=</span> <span style="color:#FF9580">20</span><span style="color:#94B0AF">;</span>
+  <span style="color:#3FD2C7">return</span> <span style="color:#CFE3E2">ui</span><span style="color:#94B0AF">.</span><span style="color:#7FB8FF">paint</span><span style="color:#94B0AF">(</span><span style="color:#B4E08A">"abyss"</span><span style="color:#94B0AF">, /</span><span style="color:#E0A3FF">\w+</span><span style="color:#94B0AF">/);</span>
+<span style="color:#94B0AF">}</span></pre>
+  <div class="term" style="background:#0A1517;border-color:#17292C;color:#CFE3E2"><span style="color:#B4E08A">➜</span> <span style="color:#3FD2C7">~/app</span> <span style="color:#7FB8FF">git:(</span><span style="color:#FF8070">main</span><span style="color:#7FB8FF">)</span> <span style="color:#F2D279">npm</span> test</div>
+</div>
+<div class="card" style="background:#24222F;border-color:#343143">
+  <div class="bar" style="background:#1E1C28;border-color:#343143">
+    <b style="color:#F0EEFA">Dusk</b><span class="sw"><i style="background:#F2A7C3"></i><i style="background:#F2A7C3"></i><i style="background:#9CCFF2"></i><i style="background:#C4B0FF"></i><i style="background:#B8E3B0"></i><i style="background:#F5C890"></i><i style="background:#F59E9E"></i></span>
+  </div>
+  <pre style="color:#D6D3E6"><span style="color:#837F9B">// low-contrast twilight violet-gray with rose accents</span>
+<span style="color:#F2A7C3">export async function</span> <span style="color:#9CCFF2">render</span><span style="color:#A6A2BC">(</span><span style="color:#BFBBD6"><i>theme</i></span><span style="color:#A6A2BC">:</span> <span style="color:#C4B0FF">Theme</span><span style="color:#A6A2BC">) {</span>
+  <span style="color:#F2A7C3">const</span> <span style="color:#D6D3E6">size</span> <span style="color:#A6A2BC">=</span> <span style="color:#F5C890">20</span><span style="color:#A6A2BC">;</span>
+  <span style="color:#F2A7C3">return</span> <span style="color:#D6D3E6">ui</span><span style="color:#A6A2BC">.</span><span style="color:#9CCFF2">paint</span><span style="color:#A6A2BC">(</span><span style="color:#B8E3B0">"dusk"</span><span style="color:#A6A2BC">, /</span><span style="color:#F59E9E">\w+</span><span style="color:#A6A2BC">/);</span>
+<span style="color:#A6A2BC">}</span></pre>
+  <div class="term" style="background:#24222F;border-color:#343143;color:#D6D3E6"><span style="color:#B8E3B0">➜</span> <span style="color:#8FDCD6">~/app</span> <span style="color:#9CCFF2">git:(</span><span style="color:#F59E9E">main</span><span style="color:#9CCFF2">)</span> <span style="color:#F5C890">npm</span> test</div>
+</div></div><div class="col"><div class="card" style="background:#FFFFFF;border-color:#E5E5E5">
+  <div class="bar" style="background:#F7F7F7;border-color:#E5E5E5">
+    <b style="color:#000000">Snow</b><span class="sw"><i style="background:#111111"></i><i style="background:#0B57D0"></i><i style="background:#00717C"></i><i style="background:#7B2CBF"></i><i style="background:#1A7F37"></i><i style="background:#A85400"></i><i style="background:#C62828"></i></span>
+  </div>
+  <pre style="color:#1F1F1F"><span style="color:#737373">// pure white, monochrome chrome, maximum clarity</span>
+<span style="color:#0B57D0">export async function</span> <span style="color:#00717C">render</span><span style="color:#555555">(</span><span style="color:#36507A"><i>theme</i></span><span style="color:#555555">:</span> <span style="color:#7B2CBF">Theme</span><span style="color:#555555">) {</span>
+  <span style="color:#0B57D0">const</span> <span style="color:#1F1F1F">size</span> <span style="color:#555555">=</span> <span style="color:#A85400">20</span><span style="color:#555555">;</span>
+  <span style="color:#0B57D0">return</span> <span style="color:#1F1F1F">ui</span><span style="color:#555555">.</span><span style="color:#00717C">paint</span><span style="color:#555555">(</span><span style="color:#1A7F37">"snow"</span><span style="color:#555555">, /</span><span style="color:#C2185B">\w+</span><span style="color:#555555">/);</span>
+<span style="color:#555555">}</span></pre>
+  <div class="term" style="background:#FFFFFF;border-color:#E5E5E5;color:#1F1F1F"><span style="color:#1A7F37">➜</span> <span style="color:#00717C">~/app</span> <span style="color:#0B57D0">git:(</span><span style="color:#C62828">main</span><span style="color:#0B57D0">)</span> <span style="color:#9A6700">npm</span> test</div>
+</div>
+<div class="card" style="background:#FBF9F4;border-color:#E3DED1">
+  <div class="bar" style="background:#F4F1E9;border-color:#E3DED1">
+    <b style="color:#11100E">Paper</b><span class="sw"><i style="background:#C2410C"></i><i style="background:#A63A12"></i><i style="background:#1F6F8B"></i><i style="background:#7A3E9D"></i><i style="background:#3F7D20"></i><i style="background:#965700"></i><i style="background:#B83226"></i></span>
+  </div>
+  <pre style="color:#2B2925"><span style="color:#7D776B">// warm notebook paper with burnt-orange ink</span>
+<span style="color:#A63A12">export async function</span> <span style="color:#1F6F8B">render</span><span style="color:#5E594F">(</span><span style="color:#4B5B73"><i>theme</i></span><span style="color:#5E594F">:</span> <span style="color:#7A3E9D">Theme</span><span style="color:#5E594F">) {</span>
+  <span style="color:#A63A12">const</span> <span style="color:#2B2925">size</span> <span style="color:#5E594F">=</span> <span style="color:#965700">20</span><span style="color:#5E594F">;</span>
+  <span style="color:#A63A12">return</span> <span style="color:#2B2925">ui</span><span style="color:#5E594F">.</span><span style="color:#1F6F8B">paint</span><span style="color:#5E594F">(</span><span style="color:#3F7D20">"paper"</span><span style="color:#5E594F">, /</span><span style="color:#B0306B">\w+</span><span style="color:#5E594F">/);</span>
+<span style="color:#5E594F">}</span></pre>
+  <div class="term" style="background:#FBF9F4;border-color:#E3DED1;color:#2B2925"><span style="color:#3F7D20">➜</span> <span style="color:#1F6F8B">~/app</span> <span style="color:#1F5F9B">git:(</span><span style="color:#B83226">main</span><span style="color:#1F5F9B">)</span> <span style="color:#8F6200">npm</span> test</div>
+</div>
+<div class="card" style="background:#F6F1E7;border-color:#DED5C3">
+  <div class="bar" style="background:#EEE7D9;border-color:#DED5C3">
+    <b style="color:#15130F">Linen</b><span class="sw"><i style="background:#2F6F6A"></i><i style="background:#2A6661"></i><i style="background:#8A4B0F"></i><i style="background:#6A3F8F"></i><i style="background:#4A7419"></i><i style="background:#A33E2B"></i><i style="background:#A33E2B"></i></span>
+  </div>
+  <pre style="color:#33302A"><span style="color:#7C7364">// soft cream linen with deep teal accents</span>
+<span style="color:#2A6661">export async function</span> <span style="color:#8A4B0F">render</span><span style="color:#615A4D">(</span><span style="color:#4C5A66"><i>theme</i></span><span style="color:#615A4D">:</span> <span style="color:#6A3F8F">Theme</span><span style="color:#615A4D">) {</span>
+  <span style="color:#2A6661">const</span> <span style="color:#33302A">size</span> <span style="color:#615A4D">=</span> <span style="color:#A33E2B">20</span><span style="color:#615A4D">;</span>
+  <span style="color:#2A6661">return</span> <span style="color:#33302A">ui</span><span style="color:#615A4D">.</span><span style="color:#8A4B0F">paint</span><span style="color:#615A4D">(</span><span style="color:#4A7419">"linen"</span><span style="color:#615A4D">, /</span><span style="color:#A8326E">\w+</span><span style="color:#615A4D">/);</span>
+<span style="color:#615A4D">}</span></pre>
+  <div class="term" style="background:#F6F1E7;border-color:#DED5C3;color:#33302A"><span style="color:#4A7419">➜</span> <span style="color:#2A6661">~/app</span> <span style="color:#2D5B8F">git:(</span><span style="color:#A33E2B">main</span><span style="color:#2D5B8F">)</span> <span style="color:#8A6100">npm</span> test</div>
+</div>
+<div class="card" style="background:#F1E6CF;border-color:#D8C8A8">
+  <div class="bar" style="background:#E8DBC0;border-color:#D8C8A8">
+    <b style="color:#1E160D">Sepia</b><span class="sw"><i style="background:#8B4513"></i><i style="background:#8B3A12"></i><i style="background:#2A5A69"></i><i style="background:#6B3A78"></i><i style="background:#4A6410"></i><i style="background:#8F5300"></i><i style="background:#9C2E22"></i></span>
+  </div>
+  <pre style="color:#3B2F22"><span style="color:#76654D">// aged parchment, the most eye-friendly warm light</span>
+<span style="color:#8B3A12">export async function</span> <span style="color:#2A5A69">render</span><span style="color:#5E4E3B">(</span><span style="color:#5A4A3A"><i>theme</i></span><span style="color:#5E4E3B">:</span> <span style="color:#6B3A78">Theme</span><span style="color:#5E4E3B">) {</span>
+  <span style="color:#8B3A12">const</span> <span style="color:#3B2F22">size</span> <span style="color:#5E4E3B">=</span> <span style="color:#8F5300">20</span><span style="color:#5E4E3B">;</span>
+  <span style="color:#8B3A12">return</span> <span style="color:#3B2F22">ui</span><span style="color:#5E4E3B">.</span><span style="color:#2A5A69">paint</span><span style="color:#5E4E3B">(</span><span style="color:#4A6410">"sepia"</span><span style="color:#5E4E3B">, /</span><span style="color:#9C2E57">\w+</span><span style="color:#5E4E3B">/);</span>
+<span style="color:#5E4E3B">}</span></pre>
+  <div class="term" style="background:#F1E6CF;border-color:#D8C8A8;color:#3B2F22"><span style="color:#4A6410">➜</span> <span style="color:#2A5A69">~/app</span> <span style="color:#2D5480">git:(</span><span style="color:#9C2E22">main</span><span style="color:#2D5480">)</span> <span style="color:#805000">npm</span> test</div>
+</div>
+<div class="card" style="background:#F4F6F8;border-color:#DCE1E7">
+  <div class="bar" style="background:#ECEFF3;border-color:#DCE1E7">
+    <b style="color:#0D1117">Mist</b><span class="sw"><i style="background:#0969DA"></i><i style="background:#0B5FC2"></i><i style="background:#7A3FCF"></i><i style="background:#A8450A"></i><i style="background:#17734A"></i><i style="background:#A3238E"></i><i style="background:#C0262E"></i></span>
+  </div>
+  <pre style="color:#24292F"><span style="color:#66707A">// cool morning gray-white with a clear blue accent</span>
+<span style="color:#0B5FC2">export async function</span> <span style="color:#7A3FCF">render</span><span style="color:#4F5864">(</span><span style="color:#3D5874"><i>theme</i></span><span style="color:#4F5864">:</span> <span style="color:#A8450A">Theme</span><span style="color:#4F5864">) {</span>
+  <span style="color:#0B5FC2">const</span> <span style="color:#24292F">size</span> <span style="color:#4F5864">=</span> <span style="color:#A3238E">20</span><span style="color:#4F5864">;</span>
+  <span style="color:#0B5FC2">return</span> <span style="color:#24292F">ui</span><span style="color:#4F5864">.</span><span style="color:#7A3FCF">paint</span><span style="color:#4F5864">(</span><span style="color:#17734A">"mist"</span><span style="color:#4F5864">, /</span><span style="color:#C02B5B">\w+</span><span style="color:#4F5864">/);</span>
+<span style="color:#4F5864">}</span></pre>
+  <div class="term" style="background:#F4F6F8;border-color:#DCE1E7;color:#24292F"><span style="color:#17734A">➜</span> <span style="color:#0A6E7F">~/app</span> <span style="color:#0B5FC2">git:(</span><span style="color:#C0262E">main</span><span style="color:#0B5FC2">)</span> <span style="color:#8F6500">npm</span> test</div>
+</div>
+<div class="card" style="background:#E8EDF2;border-color:#CBD5DF">
+  <div class="bar" style="background:#DEE5EC;border-color:#CBD5DF">
+    <b style="color:#0B131D">Cloud</b><span class="sw"><i style="background:#3B5BDB"></i><i style="background:#3348C4"></i><i style="background:#00657A"></i><i style="background:#833BA0"></i><i style="background:#2B6A2D"></i><i style="background:#984700"></i><i style="background:#B42828"></i></span>
+  </div>
+  <pre style="color:#1F2A37"><span style="color:#5C6B7D">// light slate blue-gray, a softer alternative to white</span>
+<span style="color:#3348C4">export async function</span> <span style="color:#00657A">render</span><span style="color:#475569">(</span><span style="color:#3F536B"><i>theme</i></span><span style="color:#475569">:</span> <span style="color:#833BA0">Theme</span><span style="color:#475569">) {</span>
+  <span style="color:#3348C4">const</span> <span style="color:#1F2A37">size</span> <span style="color:#475569">=</span> <span style="color:#984700">20</span><span style="color:#475569">;</span>
+  <span style="color:#3348C4">return</span> <span style="color:#1F2A37">ui</span><span style="color:#475569">.</span><span style="color:#00657A">paint</span><span style="color:#475569">(</span><span style="color:#2B6A2D">"cloud"</span><span style="color:#475569">, /</span><span style="color:#AA2756">\w+</span><span style="color:#475569">/);</span>
+<span style="color:#475569">}</span></pre>
+  <div class="term" style="background:#E8EDF2;border-color:#CBD5DF;color:#1F2A37"><span style="color:#2B6A2D">➜</span> <span style="color:#00657A">~/app</span> <span style="color:#3348C4">git:(</span><span style="color:#B42828">main</span><span style="color:#3348C4">)</span> <span style="color:#875A00">npm</span> test</div>
+</div>
+<div class="card" style="background:#EEF2EC;border-color:#D2DBCD">
+  <div class="bar" style="background:#E4EAE1;border-color:#D2DBCD">
+    <b style="color:#101712">Sage</b><span class="sw"><i style="background:#2F7A4F"></i><i style="background:#2C6A43"></i><i style="background:#1F5C87"></i><i style="background:#844696"></i><i style="background:#655A0C"></i><i style="background:#A3442A"></i><i style="background:#A8352A"></i></span>
+  </div>
+  <pre style="color:#26302A"><span style="color:#68766C">// pale sage green, restful like a studio wall</span>
+<span style="color:#2C6A43">export async function</span> <span style="color:#1F5C87">render</span><span style="color:#4F5A52">(</span><span style="color:#4A5A52"><i>theme</i></span><span style="color:#4F5A52">:</span> <span style="color:#844696">Theme</span><span style="color:#4F5A52">) {</span>
+  <span style="color:#2C6A43">const</span> <span style="color:#26302A">size</span> <span style="color:#4F5A52">=</span> <span style="color:#A3442A">20</span><span style="color:#4F5A52">;</span>
+  <span style="color:#2C6A43">return</span> <span style="color:#26302A">ui</span><span style="color:#4F5A52">.</span><span style="color:#1F5C87">paint</span><span style="color:#4F5A52">(</span><span style="color:#655A0C">"sage"</span><span style="color:#4F5A52">, /</span><span style="color:#A02F60">\w+</span><span style="color:#4F5A52">/);</span>
+<span style="color:#4F5A52">}</span></pre>
+  <div class="term" style="background:#EEF2EC;border-color:#D2DBCD;color:#26302A"><span style="color:#2C6A43">➜</span> <span style="color:#1D6B6B">~/app</span> <span style="color:#1F5C87">git:(</span><span style="color:#A8352A">main</span><span style="color:#1F5C87">)</span> <span style="color:#7A6400">npm</span> test</div>
+</div>
+<div class="card" style="background:#FAF1F0;border-color:#E6D3D0">
+  <div class="bar" style="background:#F3E6E4;border-color:#E6D3D0">
+    <b style="color:#160F11">Blush</b><span class="sw"><i style="background:#C23B6B"></i><i style="background:#B02E5B"></i><i style="background:#2A6589"></i><i style="background:#7140A3"></i><i style="background:#3A7332"></i><i style="background:#9A5500"></i><i style="background:#B02E3B"></i></span>
+  </div>
+  <pre style="color:#2E2426"><span style="color:#806D6B">// rose-tinted off-white with raspberry accents</span>
+<span style="color:#B02E5B">export async function</span> <span style="color:#2A6589">render</span><span style="color:#5E4F52">(</span><span style="color:#5A4A60"><i>theme</i></span><span style="color:#5E4F52">:</span> <span style="color:#7140A3">Theme</span><span style="color:#5E4F52">) {</span>
+  <span style="color:#B02E5B">const</span> <span style="color:#2E2426">size</span> <span style="color:#5E4F52">=</span> <span style="color:#9A5500">20</span><span style="color:#5E4F52">;</span>
+  <span style="color:#B02E5B">return</span> <span style="color:#2E2426">ui</span><span style="color:#5E4F52">.</span><span style="color:#2A6589">paint</span><span style="color:#5E4F52">(</span><span style="color:#3A7332">"blush"</span><span style="color:#5E4F52">, /</span><span style="color:#943A94">\w+</span><span style="color:#5E4F52">/);</span>
+<span style="color:#5E4F52">}</span></pre>
+  <div class="term" style="background:#FAF1F0;border-color:#E6D3D0;color:#2E2426"><span style="color:#3A7332">➜</span> <span style="color:#1F6E78">~/app</span> <span style="color:#2A6589">git:(</span><span style="color:#B02E3B">main</span><span style="color:#2A6589">)</span> <span style="color:#8A5E00">npm</span> test</div>
+</div>
+<div class="card" style="background:#F4F2FA;border-color:#DAD5EC">
+  <div class="bar" style="background:#EBE8F5;border-color:#DAD5EC">
+    <b style="color:#110F1F">Lavender</b><span class="sw"><i style="background:#6D4AFF"></i><i style="background:#5B3BE0"></i><i style="background:#0D6886"></i><i style="background:#A0307A"></i><i style="background:#2B7245"></i><i style="background:#975400"></i><i style="background:#B33838"></i></span>
+  </div>
+  <pre style="color:#26233A"><span style="color:#706C88">// lilac-washed light with electric violet accents</span>
+<span style="color:#5B3BE0">export async function</span> <span style="color:#0D6886">render</span><span style="color:#55516C">(</span><span style="color:#4A4870"><i>theme</i></span><span style="color:#55516C">:</span> <span style="color:#A0307A">Theme</span><span style="color:#55516C">) {</span>
+  <span style="color:#5B3BE0">const</span> <span style="color:#26233A">size</span> <span style="color:#55516C">=</span> <span style="color:#975400">20</span><span style="color:#55516C">;</span>
+  <span style="color:#5B3BE0">return</span> <span style="color:#26233A">ui</span><span style="color:#55516C">.</span><span style="color:#0D6886">paint</span><span style="color:#55516C">(</span><span style="color:#2B7245">"lavender"</span><span style="color:#55516C">, /</span><span style="color:#AA3838">\w+</span><span style="color:#55516C">/);</span>
+<span style="color:#55516C">}</span></pre>
+  <div class="term" style="background:#F4F2FA;border-color:#DAD5EC;color:#26233A"><span style="color:#2B7245">➜</span> <span style="color:#0D6886">~/app</span> <span style="color:#3D52C8">git:(</span><span style="color:#B33838">main</span><span style="color:#3D52C8">)</span> <span style="color:#8A5E00">npm</span> test</div>
+</div>
+<div class="card" style="background:#E3E2DE;border-color:#C9C8C1">
+  <div class="bar" style="background:#D8D7D2;border-color:#C9C8C1">
+    <b style="color:#0F0E0C">Stone</b><span class="sw"><i style="background:#3D5A80"></i><i style="background:#2C4C85"></i><i style="background:#1A5C5C"></i><i style="background:#73397A"></i><i style="background:#3A6419"></i><i style="background:#8C4500"></i><i style="background:#9E2F2F"></i></span>
+  </div>
+  <pre style="color:#262522"><span style="color:#615F57">// dim warm concrete gray, low-glare light for all-day use</span>
+<span style="color:#2C4C85">export async function</span> <span style="color:#1A5C5C">render</span><span style="color:#4F4D47">(</span><span style="color:#4C4A56"><i>theme</i></span><span style="color:#4F4D47">:</span> <span style="color:#73397A">Theme</span><span style="color:#4F4D47">) {</span>
+  <span style="color:#2C4C85">const</span> <span style="color:#262522">size</span> <span style="color:#4F4D47">=</span> <span style="color:#8C4500">20</span><span style="color:#4F4D47">;</span>
+  <span style="color:#2C4C85">return</span> <span style="color:#262522">ui</span><span style="color:#4F4D47">.</span><span style="color:#1A5C5C">paint</span><span style="color:#4F4D47">(</span><span style="color:#3A6419">"stone"</span><span style="color:#4F4D47">, /</span><span style="color:#932C4B">\w+</span><span style="color:#4F4D47">/);</span>
+<span style="color:#4F4D47">}</span></pre>
+  <div class="term" style="background:#E3E2DE;border-color:#C9C8C1;color:#262522"><span style="color:#3A6419">➜</span> <span style="color:#1A5C5C">~/app</span> <span style="color:#2C4C85">git:(</span><span style="color:#9E2F2F">main</span><span style="color:#2C4C85">)</span> <span style="color:#7A5200">npm</span> test</div>
+</div></div></div></body></html>
